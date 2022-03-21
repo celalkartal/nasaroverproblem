@@ -6,12 +6,12 @@ public enum Instruction {
 	private char command;
 
 	public static Instruction getInstructionByCommand(char command) {
-		for (Instruction i : values()) {
-			if (command == i.getCommand()) {
-				return i;
+		for (Instruction instruction : values()) {
+			if (command == instruction.getCommand()) {
+				return instruction;
 			}
 		}
-		throw new IllegalArgumentException("Invalid Command!");
+		throw new IllegalArgumentException("Invalid Command!:" + command);
 	}
 
 	Instruction(char command) {
