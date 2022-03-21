@@ -32,7 +32,7 @@ public class NasaApplication {
 				String secondLineData = scanner.nextLine();
 				rover.process(secondLineData);
 
-				System.out.println("\nOUTPUT:");
+				System.out.println("\nOutput:");
 				rover.printPosition();
 				System.out.println("\nInput For Next Rover(Exit?'Y')");
 				firstLineData = scanner.nextLine();
