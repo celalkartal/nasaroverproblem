@@ -18,7 +18,7 @@ public class Rover {
 
 	public void setX(int x) {
 		if (x > grid.getX()) {
-			throw new IllegalArgumentException("Out of X coordinate!");
+			throw new IllegalArgumentException("Out of X coordinate!:" + x);
 		}
 		this.x = x;
 	}
@@ -29,7 +29,7 @@ public class Rover {
 
 	public void setY(int y) {
 		if (y > grid.getY()) {
-			throw new IllegalArgumentException("Out of Y coordinate!");
+			throw new IllegalArgumentException("Out of Y coordinate!:" + y);
 		}
 		this.y = y;
 	}

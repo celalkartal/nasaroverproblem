@@ -34,7 +34,7 @@ public class NasaApplication {
 
 				System.out.println("\nOUTPUT:");
 				rover.printPosition();
-				System.out.println("\nInput For Rover(Exit?'Y')");
+				System.out.println("\nInput For Next Rover(Exit?'Y')");
 				firstLineData = scanner.nextLine();
 			}
 		}
