@@ -7,7 +7,7 @@ public class NasaApplication {
 	public static void main(String[] args) {
 
 		try (Scanner scanner = new Scanner(System.in)) {
-			System.out.println("Please input Plateau data");
+			System.out.println("Input For Plateau:");
 			String lineData = scanner.nextLine();
 			String[] lineDataArray = lineData.split(" ");
 			if (lineDataArray.length != 2) {
@@ -17,7 +17,7 @@ public class NasaApplication {
 			int upperRightCoordinate = Integer.valueOf(lineDataArray[0]);
 			int lowerRightCoordinate = Integer.valueOf(lineDataArray[1]);
 			Grid plateau = new Grid(upperRightCoordinate, lowerRightCoordinate);
-			System.out.println("Please input Rover data(For exit, input 'Y')");
+			System.out.println("\nInput For Rover(Exit?'Y')");
 			String firstLineData = scanner.nextLine();
 			while (!"Y".equals(firstLineData)) {
 				String[] firstLineDataArray = firstLineData.split(" ");
@@ -31,8 +31,10 @@ public class NasaApplication {
 				rover.setCurrentDirectionCode(roverFirstLineDataArray[2].charAt(0));
 				String secondLineData = scanner.nextLine();
 				rover.process(secondLineData);
+
+				System.out.println("\nOUTPUT:");
 				rover.printPosition();
-				System.out.println("Please input Rover data(For exit, input 'Y')");
+				System.out.println("\nInput For Rover(Exit?'Y')");
 				firstLineData = scanner.nextLine();
 			}
 		}
